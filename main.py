@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 from fpdf import FPDF
 import base64
 
+# Adding the dataset
 dataset = st.file_uploader("upload file here", type=['csv'])
+
 if dataset is not None:
     df = pd.read_csv(dataset)
     st.sidebar.write(' ### Rows and Columns:', df.shape)
